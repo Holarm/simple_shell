@@ -1,12 +1,12 @@
 #include "shell.h"
 
 /**
- * input_buf - buffers commands
+ * input_buf - commands to the buffers
  * @info: struct
- * @buf: address to the buffer
- * @len: address to the  len var
+ * @buf: buffer to the address
+ * @len: len var to the addres
  *
- * Return: bytes information
+ * Return: information of bytes
  */
 ssize_t input_buf(info_t *info, char **buf, size_t *len)
 {
@@ -45,10 +45,10 @@ ssize_t input_buf(info_t *info, char **buf, size_t *len)
 }
 
 /**
- * get_input - gets a line without a new line
+ * get_input - without a new line gets a line
  * @info:  struct
  *
- * Return: bytes information
+ * Return: information of bytes
  */
 ssize_t get_input(info_t *info)
 {
@@ -73,8 +73,7 @@ ssize_t get_input(info_t *info)
 				break;
 			l++;
 		}
-
-		k = l + 1; 
+		k = l + 1;
 		if (l >= len) /* reached end of buffer? */
 		{
 			k = len = 0; /* reset position and length */
@@ -90,12 +89,12 @@ ssize_t get_input(info_t *info)
 }
 
 /**
- * read_buf - interprets the buffer
+ * read_buf - the buffer is interpreted
  * @info: struct
  * @buf: buffer
  * @i: size
  *
- * Return: the letter r
+ * Return: letter r
  */
 ssize_t read_buf(info_t *info, char *buf, size_t *k)
 {
@@ -110,12 +109,12 @@ ssize_t read_buf(info_t *info, char *buf, size_t *k)
 }
 
 /**
- * _getline - gets the  line of input from STDIN
+ * _getline - a line of input is gotten from STDIN
  * @info:  struct
- * @ptr: address of pointer to buffer NULL
- * @length: size of preallocated ptr buffer if not NULL
+ * @ptr: The address of pointer to buffer NULL
+ * @length: The preallocated ptr buffer size is not NULL
  *
- * Return: s
+ * Return: letter s
  */
 int _getline(info_t *info, char **ptr, size_t *length)
 {
@@ -157,10 +156,10 @@ int _getline(info_t *info, char **ptr, size_t *length)
 }
 
 /**
- * sigintHandler - blocks ctrl-C
- * @sig_num: the number signal
+ * sigintHandler - ctrl-C is block
+ * @sig_num: the signal number
  *
- * Return: void nothing
+ * Return: nothing void
  */
 void sigintHandler(__attribute__((unused))int sig_num)
 {
