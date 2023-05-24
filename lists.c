@@ -90,13 +90,12 @@ list_t *add_node_end(list_t **head, const char *str, int num)
 	return (new_node);
 }
 
-<<<<<<< HEAD
 /*
  * print_list_str - prints only the str element
  * @h: pointer to first node
  * Return: size of list
 =======
-/**
+*
  * print_list_str - the str element of a list_t linked list is only printed
  * @h: first node to pointer
  *
