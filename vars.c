@@ -98,7 +98,7 @@ int replace_alias(info_t *info)
 }
 
 /**
- * replace_vars - replaces vars 
+ * replace_vars - replaces vars
  * @info: the parameter struct
  *
  * Return: 1 if replaced, 0 otherwise

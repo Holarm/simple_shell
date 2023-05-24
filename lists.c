@@ -1,11 +1,11 @@
-include "shell.h"
+#include "shell.h"
 
 /**
- * add_node - adds a node at the first
- * @head: address of pointer to the  head node
- * @str: str field 
- * @num: it as a index used by history
- * Return: list size
+ * add_node - adds a node to the start of the list
+ * @head: address of pointer to head node
+ * @str: string field
+ * @num: node index used by history
+ * Return: size of list
  */
 list_t *add_node(list_t **head, const char *str, int num)
 {
@@ -33,11 +33,11 @@ list_t *add_node(list_t **head, const char *str, int num)
 }
 
 /**
- * add_node_end - adds a node at the end
- * @head: address of pointer to the  head node
- * @str: str field
- * @num: it is as a used by history
- * Return: list size
+ * add_node_end - adds a node to the end of the list
+ * @head: address of pointer to head node
+ * @str: string field
+ * @num: node index used by history
+ * Return: size of list
  */
 list_t *add_node_end(list_t **head, const char *str, int num)
 {
@@ -72,10 +72,9 @@ list_t *add_node_end(list_t **head, const char *str, int num)
 	return (new_node);
 }
 
-/**
- * print_list_str - prints only the str element of a list_t linked list
+/*
+ * print_list_str - prints only the str element
  * @h: pointer to first node
- *
  * Return: size of list
  */
 size_t print_list_str(const list_t *h)
@@ -93,11 +92,10 @@ size_t print_list_str(const list_t *h)
 }
 
 /**
- * delete_node_at_index - deletes node at given index
- * @head: address of pointer to first node
+ * delete_node_at_index - deletes node
+ * @head: address first node  pointer
  * @index: index of node to delete
- *
- * Return: 1 on success, 0 on failure
+ * Return: 1 on success, 0 on otherwise
  */
 int delete_node_at_index(list_t **head, unsigned int index)
 {
@@ -133,9 +131,9 @@ int delete_node_at_index(list_t **head, unsigned int index)
 }
 
 /**
- * free_list - frees the node list
- * @head_ptr: address of pointer to the node
- * Return: void
+ * free_list - frees all nodes
+ * @head_ptr: address of pointer
+ * Return: nothing
  */
 void free_list(list_t **head_ptr)
 {
