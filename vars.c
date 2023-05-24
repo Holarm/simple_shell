@@ -1,11 +1,11 @@
 #include "shell.h"
 /**
- * is_chain -test whether it is a delimeter
- * @info: parameter structure
- * @buf: the char buffer
- * @p: address of current position in buffer
+ * is_chain -test if it is a delimeter
+ * @info: parameter struct
+ * @buf: the character buffer
+ * @p: current address position in the buffer
  *
- * Return: 1 if chain delimeter, 0 if not a chain delimeter
+ * Return: success on 1, otherwise 0
  */
 int is_chain(info_t *info, char *buf, size_t *p)
 {
@@ -35,12 +35,12 @@ int is_chain(info_t *info, char *buf, size_t *p)
 }
 
 /**
- * check_chain - continue chainig based on the last status of the checking
- * @info: parameter structure
- * @buf: the char buffer
- * @p: checks on the address  of current position in buffer
+ * check_chain - checking the last status is based on continue chaining
+ * @info: parameter struct
+ * @buf: character buffer
+ * @p: the current position in buffer address is always checked
  * @i:  position in buffer
- * @len: length of buffer
+ * @len: buffer length
  *
  * Return: Void
  */
@@ -69,10 +69,10 @@ void check_chain(info_t *info, char *buf, size_t *p, size_t i, size_t len)
 }
 
 /**
- * replace_alias - replaces an aliases
- * @info: parameter structure
+ * replace_alias - alias is replaced
+ * @info: parameter struct
  *
- * Return: 1 if replaced, 0 otherwise
+ * Return: 1 on success, otherwise 0
  */
 int replace_alias(info_t *info)
 {
@@ -98,7 +98,7 @@ int replace_alias(info_t *info)
 }
 
 /**
- * replace_vars - replaces vars 
+ * replace_vars - vars replaced
  * @info: the parameter struct
  *
  * Return: 1 if replaced, 0 otherwise
@@ -139,11 +139,11 @@ int replace_vars(info_t *info)
 }
 
 /**
- * replace_string - replaces string
- * @old: address informing the old string
- * @new:  adress new string
+ * replace_string - strings replaced
+ * @old: informing the old string address
+ * @new: new string address
  *
- * Return: 1 if replaced, 0 otherwise
+ * Return: 1 on success, 0 otherwise
  */
 int replace_string(char **old, char *new)
 {

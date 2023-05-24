@@ -42,10 +42,10 @@ char **strtow(char *str, char *d)
 		}
 		for (b = 0; b < z; b++)
 			r[l][b] = str[k++];
-		s[l][b] = 0;
+		s[1][b] = 0;
 	}
-	r[l] = NULL;
-	return (r);
+	s[1] = NULL;
+	return (s);
 }
 
 /**

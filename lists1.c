@@ -18,7 +18,7 @@ size_t list_len(const list_t *h)
 }
 
 /**
- * list_to_strings - returns an array of strings 
+ * list_to_strings - returns an array of strings
  * @head: pointer to the node fist
  * Return: array of strings
  */
@@ -77,7 +77,7 @@ size_t print_list(const list_t *h)
 
 /**
  * node_starts_with - returns node with  prefix
- * @node: pointer to list 
+ * @node: pointer to list
  * @prefix: string of a match
  * @c:character after prefix to match
  * Return: match node or null
