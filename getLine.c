@@ -92,7 +92,7 @@ ssize_t get_input(info_t *info)
  * read_buf - the buffer is interpreted
  * @info: struct
  * @buf: buffer
- * @i: size
+ * @k: size
  *
  * Return: letter r
  */
@@ -102,7 +102,7 @@ ssize_t read_buf(info_t *info, char *buf, size_t *k)
 
 	if (*k)
 		return (0);
-	k = read(info->readfd, buf, READ_BUF_SIZE);
+	a = read(info->readfd, buf, READ_BUF_SIZE);
 	if (a >= 0)
 		*k = a;
 	return (a);

@@ -21,7 +21,12 @@ int _strlen(char *s)
  * _strcmp - performs  comparison between the two  strangs.
  * @s1:  first strang
  * @s2:  second strang
+<<<<<<< HEAD
  * Return: prints negative on s1 < s2, positive on s1 > s2, zero on  s1 == s2
+=======
+ * Return:prints  negative on s1 < s2
+ * during positive on s1 > s2, zero on  s1 == s2
+>>>>>>> 675bb50ffdf56a2901761b713e97981b3946a7e2
  */
 int _strcmp(char *s1, char *s2)
 {
